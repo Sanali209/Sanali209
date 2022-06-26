@@ -1,12 +1,13 @@
 
 <?php
 
-//defain function forr conect to db
+//defain function forr conect to db and set charset utf-8
 function db_connect() {
     $connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     if (!$result) {
         throw new Exception('Could not connect to database server');
     }
+    $connection->set_charset('utf8');
     return $connection
     
     ;

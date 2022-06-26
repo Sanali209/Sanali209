@@ -1,0 +1,77 @@
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script charset="utf-8" src="https://g.alicdn.com/mtb/lib-flexible/0.3.2/flexible.js" crossorigin></script>
+    <script charset="utf-8" src="//g.alicdn.com/code/lib/qrcodejs/1.0.0/qrcode.min.js" crossorigin></script>
+    <link rel="stylesheet" href="https://g.alicdn.com/bsop-static/sufei-punish/0.0.141/build/main.css">
+</head>
+
+<body><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=2103243e16558998607835785e0996&asid=AQAAAADUBrNi9ejuFwAAAACptYNql5IeSg==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+    <punish-component />
+    <script>
+        window._config_ = {
+            "renderTo": "#nocaptcha",
+            "NCTOKENSTR": "34fbec78fc257a95cc67f375cab12401",
+            "action": "captcha",
+            "HOST": "aliexpress.ru:443",
+            "PATH": "/item/1005003973540152.html",
+            "FORMACTIOIN": "/item/1005003973540152.html/_____tmd_____/verify/",
+            "BXSTEP": "100",
+            "SECDATA": "xb34fbec78fc257a95cc67f375cab124011655899860a-388365139a1154972875aaaac2aaa__bx__aliexpress.ru%3A443%2Fitem%2F1005003973540152.html",
+            "NCAPPKEY": "X82Y__729cde7c986b2e39d0665772e2016fd3",
+      		"isUpgrade": "false",
+            "customImage": "https://img.alicdn.com/tfs/TB1e9RZrmR26e4jSZFEXXbwuXXa-680-495.png",
+            "logo": "https://img.alicdn.com/tfs/TB1arM9tk9l0K4jSZFKXXXFjpXa-420-142.jpg",
+            "logoLink": "https://aliexpress.com/",
+      		"copyright": "©️ 2010-2020 AliExpress.com.",
+            "noCaptchaCallback": "",
+            "language": "",
+            "languageConfig": "",
+            "url":"/item/1005003973540152.html/_____tmd_____/punish?x5secdata=xb34fbec78fc257a95cc67f375cab124011655899860a-388365139a1154972875aaaac2aaa__bx__aliexpress.ru%3A443%2Fitem%2F1005003973540152.html",	
+            "languageConfigJson": "",
+            "noCaptchaLanguage": "",
+      		"js": "",
+      		"css": ""
+        };
+    </script>
+<!--rgv587_flag:sm-->
+  	<script>
+      	var custom_config = {};
+      	if (typeof custom_config === "object") {
+      		window._custom_config_ = window._custom_config_ || {};
+      		for (var key in custom_config) {
+      			window._custom_config_[key] = custom_config[key];
+      		}
+      	}
+    </script>
+</body>
+<script charset="utf-8" src="//g.alicdn.com/bsop-static/sufei-punish/0.0.141/build/punishpage.min.js" crossorigin></script>
+<script charset="utf-8" type="text/javascript"
+    src="https://g.alicdn.com/dt/tracker/4.0.0/??tracker.Tracker.js,tracker.interfaceTrackerPlugin.js,tracker.performanceTrackerPlugin.js"
+    crossorigin></script>
+<script type="text/javascript">
+    var tracker = new window.Tracker({
+        uidResolver: function () {
+            // 具体获取 userId 逻辑自行实现
+            return "34fbec78fc257a95cc67f375cab12401__1.1.1";
+        }, pid: 'punish-page', plugins: [[window.interfaceTrackerPlugin], [window.performanceTrackerPlugin, { sampleRate: 1 }]]
+    });
+    tracker.install();
+    tracker.log({
+        code: 11,  // 系统自动生成，请勿修改 100%
+        c1: '34fbec78fc257a95cc67f375cab12401',
+  		c2: '0.0.141',
+        msg: '霸下通用 新版处置页面',  // 异常信息，推荐传入
+        sampleRate: 1.00,  // 目前采样率为 100.00%
+    });
+</script>
+
+</html>
