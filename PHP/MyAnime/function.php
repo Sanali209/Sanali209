@@ -2,7 +2,7 @@
 <?php
 
 
-
+//Functions for worcking with database
 
 //defain function forr conect to db and set charset utf-8
 function db_connect() {
@@ -29,20 +29,15 @@ function table_exists($table_name) {
     return $result->num_rows > 0;
 }
 
-//function forr create database table via sql query
-//in this function we create table forr animeItems, animeGenres, animeCharacters_anime, Tags
+// worcking viz table animeItems
 
+
+//function forr create database table via sql query
+//in this function we create table forr animeItems,
 function create_table($table_name) {
     $connection = db_connect();
     $query = "CREATE TABLE $table_name (
         id INT NOT NULL AUTO_INCREMENT,
-        name VARCHAR(100) NOT NULL,
-        path VARCHAR(100) NOT NULL,
-        description VARCHAR(100) NOT NULL,
-        date VARCHAR(100) NOT NULL,
-        time VARCHAR(100) NOT NULL,
-        reiting VARCHAR(100) NOT NULL,
-        PRIMARY KEY (id)
     )";
     $result = $connection->query($query);
     db_close($connection);
@@ -50,8 +45,7 @@ function create_table($table_name) {
 }
 
 //function forr add new record to database table
-//in this function we add new record to table forr pdflib
-// and add fields name, path, description, date, time,reiting
+//in this function we add new record to table forr animeItems
 function add_record($table_name, $name, $path, $description, $date, $time, $reiting) {
     $connection = db_connect();
     $query = "INSERT INTO $table_name (name, path, description, date, time, reiting) VALUES ('$name', '$path', '$description', '$date', '$time', '$reiting')";
@@ -59,6 +53,16 @@ function add_record($table_name, $name, $path, $description, $date, $time, $reit
     db_close($connection);
     return $result;
 }
+
+//function forr get all records from database table animeItems
+
+
+//function for ubdate record in database table animeItems
+
+// function forr delete record from database table animeItems
+
+
+
 
 // defain function import anime data to database from xml file parsed by php xml parser
 
