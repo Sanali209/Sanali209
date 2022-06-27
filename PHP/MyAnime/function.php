@@ -1,6 +1,9 @@
 
 <?php
 
+
+
+
 //defain function forr conect to db and set charset utf-8
 function db_connect() {
     $connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -27,8 +30,8 @@ function table_exists($table_name) {
 }
 
 //function forr create database table via sql query
-//in this function we create table forr pdflib
-// and add fields name, path, description, date, time,reiting
+//in this function we create table forr animeItems, animeGenres, animeCharacters_anime, Tags
+
 function create_table($table_name) {
     $connection = db_connect();
     $query = "CREATE TABLE $table_name (
@@ -56,3 +59,7 @@ function add_record($table_name, $name, $path, $description, $date, $time, $reit
     db_close($connection);
     return $result;
 }
+
+// defain function import anime data to database from xml file parsed by php xml parser
+
+
