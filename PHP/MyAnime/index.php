@@ -1,16 +1,60 @@
 <html>
 <head>
-<title>PDFlib Example: index</title>
+<title>Anime Example: index</title>
 </head>
 <body>
-<h1>PDFlib Example: index</h1>
+<h1>Anime Example: index</h1>
 <p>
-<i>index</i> is a simple test page for the indexing functions.
+
 </p>
+<!-- form for creating item tags-->
+<form action="index.php" method="post">
+<input type="hidden" name="action" value="create_tags">
+<input type="text" name="name" value="">
+<input type="submit" value="create tags">
 <p>
-<i>index</i> creates a PDF file with a table of contents.
-</p>
-<p>
+<!-- view list of all tags-->
+<h2>List of all tags</h2>
+<table border="1">
+<tr>
+<th>id</th>
+<th>name</th>
+<th>anime_id</th>
+</tr>
+<?php
+require_once('config.php');
+require_once('functions.php');
+
+// get all tags from database
+$connection=db_connect();
+// print connection status
+echo '<p>connection status: ' . $connection->connect_errno . '</p>';
+//check if database is exist on server if no create it
+if (!db_exists($connection)) {
+    db_create($connection);
+}
+
+
+
+
+$result = get_all_tags($connection);
+while ($row = $result->fetch_assoc()) {
+    echo "<tr>";
+    echo "<td>" . $row['id'] . "</td>";
+    echo "<td>" . $row['name'] . "</td>";
+    echo "</tr>";
+}
+
+if (isset($_POST['action']) && $_POST['action'] == 'create_tags') {
+    echo "<p>";
+    echo "Creating tag: " . $_POST['name'];
+    $name = $_POST['name'];
+    $connection=db_connect();
+    create_tag($connection, $name);
+}
+?>
+</table>
+
 The table of contents is created by calling the <i>index</i> function.
 </p>
 <!-- create table viz columns name,image,description-->
@@ -23,13 +67,3 @@ The table of contents is created by calling the <i>index</i> function.
 
 <body>
 <html>
-//create html table forr show data from database
-// function create_table_html($table_name) {
-
-<?php
-
-//add required includes once
-require_once('config.php');
-require_once('functions.php');
-
-$connection = db_connect();
