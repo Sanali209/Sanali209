@@ -2,18 +2,13 @@
 //defain constants for db conect
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', 'kdks6dwq');
 define('DB_NAME', 'anime');
 
 // defain constant for pdflib location
 define('PDFLIB_PATH', 'W:\\Sanali209\\PHP\\MyAnime');
 
-//defain constant for tables name in database
-define('ANIME_ITEMS', 'animeItems');
-define('ANIME_GENRES', 'animeGenres');
-define('ANIME_CHARACTERS_ANIME', 'animeCharacters_anime');
-define('TAGS', 'Tags');
-define('ANIME_LIST', 'animeList');
+
 
 //database structure anime
 // table animeItems
