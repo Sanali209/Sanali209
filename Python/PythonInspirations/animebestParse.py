@@ -2,37 +2,21 @@
 # scrap list of all anime posts and his data
 # data is name, imageUrl, url, rating, description
 # data stored to local csv file
-# use https://github.com/ramnes/notion-sdk-py
-#before run the programm, set the token
-# and install the notion python library
-# pip install notion-client
 
-#check if the curent python interpreter have notion pip package
-def install_notion():
-    try:
-        import notion
-    except ImportError:
-        try:
-            import pip
-            pip.main(['install', 'notion-client'])
-            os.system('pip install notion-client')
-            print('notion package installed')
-            return True
-        finally:
-            print('notion package not found, installing...')
-            return False
+
+
 
 
 
 
 # import the modules
 import os
-
 import requests
 from bs4 import BeautifulSoup
 import csv
-from notion_client import Client
-token = 'secret_jBtg9jwGsBpYHy62OoMrFDCtQcsctBhTbGkFdE78J5Q'
+
+
+
 
 
 # declare the variables
@@ -186,16 +170,9 @@ def main():
     #convert csv to html
     save_html()
 
-def notion_test():
-    notion = Client(auth=token)
 
-    # get notion database id by url
-    #user = notion.user
 
-    db = notion.databases.retrieve("c297f36903434c818cc8aeeee9cf0035")
-   # print(user.id)
-    print("test")
 
 # call the main function
 if __name__ == '__main__':
-    notion_test()
+    main()
