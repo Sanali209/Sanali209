@@ -1,4 +1,4 @@
-### Hi there 👋
+This is my personal projects repositorie
 
 <!--
 **Sanali209/Sanali209** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
