@@ -44,6 +44,7 @@ class Application(Tk):
     logV: StringVar
     LOGVALUE = "123"
 
+    #todo: defain fiunction to create masck for no zip files
 
     # 2 fielsd and 1 button with text "Zip"
     # button "Zip" will call function zipFiles
@@ -134,9 +135,10 @@ class Application(Tk):
 
             arhiveFilepath: str = os.path.join(curZipDir, pv.ZipFileName)
 
+            # check if list is not empty and zipr file not archive file
             if ZipingFiles and not os.path.exists(arhiveFilepath):
 
-                # display arhiveFilepath details name and list of files in poup gui window and save to csv file
+                # display arhiveFilepath details name and list of files on console
                 print("arhiveFilepath: " + arhiveFilepath)
                 print("ZipingFiles: " + str(ZipingFiles))
 
