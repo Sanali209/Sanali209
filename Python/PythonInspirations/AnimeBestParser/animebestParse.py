@@ -223,7 +223,7 @@ class DBManager:
     # defain create table function
     def create_tables(self):
         # sql query to create items table
-        # table fields id as praimari key,name,imageUrl,url,rating is integer,description
+        #  fields id as praimari key,name,imageUrl,url,rating is integer,description
         sql_create_table = """CREATE TABLE IF NOT EXISTS animebest (
                             id integer PRIMARY KEY,
                             name text NOT NULL,

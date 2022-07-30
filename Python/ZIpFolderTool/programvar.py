@@ -26,4 +26,4 @@ class vars:
         if len(args) == 3:
             return args[2]
         else:
-            return r'\\NAS3F6715\Multimedia\_Materials\CGAxis PBR Textures Collection\CGAxis PBR Textures Volume 18 - Wood'
+            return r'Y:\_Materials\cgaxis\CGAxis PBR Textures Collection\CGAxis PBR Textures Volume 21 - Walls [8K]'

@@ -11,7 +11,7 @@ import csv
 #search root
 import re
 
-dir = r"Y:\_Materials\CGAxis - Physical 2\4K Physical 2 Fabrics"
+dir = r"Y:\_Materials"
 
 # stopwords variable for stopwords list wiz "the","a","an","and","or","but","for","is","in","of","on","to","with"
 stopwords = ["the","a","an","and","or","but","for","is","in","of","on","to","with"]
@@ -35,10 +35,6 @@ def prepareFilePath(filePath):
     # all pat to lower case
     filePath = filePath.lower()
 
-
-
-
-
     # replase in  filepath strings : "\","/",":","_","-","." to " "
     filePath = filePath.replace("\\", " ")
     filePath = filePath.replace("/", " ")
@@ -46,8 +42,6 @@ def prepareFilePath(filePath):
     filePath = filePath.replace("_", " ")
     filePath = filePath.replace("-", " ")
     filePath = filePath.replace(".", " ")
-
-
 
     # todo: faind more easy way
     # replace all numbers chars  to " "
@@ -57,16 +51,10 @@ def prepareFilePath(filePath):
     # reprlace all allone 1 leter chars  to " "
     filePath = re.sub(r'\b[a-zA-Z]\b', ' ', filePath)
 
-
-
-
-
-
     # replace in filepath stopwords to waithspace
     # stopword have waithspaces
     for stopword in stopwords:
         filePath = filePath.replace(" "+stopword+" ", " ")
-
 
     print(filePath)
     return filePath
@@ -148,6 +136,7 @@ def main():
     #save string to file
     with open(r"all_pats_words.txt", "w") as outfile:
         outfile.write(all_pats_words)
+    return all_pats_words
 
 
 
